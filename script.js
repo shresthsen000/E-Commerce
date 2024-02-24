@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Hide loader on page load
     const loader = document.getElementById("loader");
     loader.style.display = "flex";
-    
+
     window.addEventListener('load', function () {
         loader.style.display = 'none';
     });
@@ -24,21 +24,47 @@ document.addEventListener("DOMContentLoaded", function () {
     function scrolling() {
         totalScroll++;
         if (totalScroll == imageLength + 1) {
-          clearInterval(autoScroll);
-          totalScroll = 1;
-          slider.style.transition = "0s";
-          slider.style.left = "0";
-          autoScroll = setInterval(scrolling, delay);
+            clearInterval(autoScroll);
+            totalScroll = 1;
+            slider.style.transition = "0s";
+            slider.style.left = "0";
+            autoScroll = setInterval(scrolling, delay);
         }
         const widthEl = document.querySelector(
-          ".slider > :first-child"
+            ".slider > :first-child"
         ).offsetWidth;
-        slider.style.left = `-${totalScroll * widthEl}px`;
+        slider.style.left = '-' + totalScroll * widthEl + 'px';
         slider.style.transition = "2s";
     }
 
     // Start auto-scroll
     autoScroll = setInterval(scrolling, delay);
+
+    // Arrow key events
+    document.addEventListener("keydown", function (event) {
+        clearInterval(autoScroll);
+
+        if (event.code === "ArrowLeft") {
+            totalScroll--;
+            if (totalScroll < 0) {
+                totalScroll = imageLength - 1;
+            }
+        } else if (event.code === "ArrowRight") {
+            totalScroll++;
+            if (totalScroll >= imageLength) {
+                totalScroll = 0;
+            }
+        }
+
+        const widthEl = document.querySelector(".slider > :first-child").offsetWidth;
+        slider.style.transition = "0s";
+        slider.style.left = '-' + totalScroll * widthEl + 'px';
+
+        setTimeout(() => {
+            slider.style.transition = "2s";
+            autoScroll = setInterval(scrolling, delay);
+        }, 50);
+    });
 
     // Previous arrow click event
     const prevArrow = document.querySelector(".prev");
@@ -50,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         const widthEl = document.querySelector(".slider > :first-child").offsetWidth;
         slider.style.transition = "0s";
-        slider.style.left = '-${totalScroll * widthEl}px';
+        slider.style.left = '-' + totalScroll * widthEl + 'px';
         setTimeout(() => {
             slider.style.transition = "2s";
             autoScroll = setInterval(scrolling, delay);
@@ -67,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         const widthEl = document.querySelector(".slider > :first-child").offsetWidth;
         slider.style.transition = "0s";
-        slider.style.left = '-${totalScroll * widthEl}px';
+        slider.style.left = '-' + totalScroll * widthEl + 'px';
         setTimeout(() => {
             slider.style.transition = "2s";
             autoScroll = setInterval(scrolling, delay);
