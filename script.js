@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Hide loader on page load
     const loader = document.getElementById("loader");
     loader.style.display = "flex";
-    
+
     window.addEventListener('load', function () {
         loader.style.display = 'none';
     });
@@ -23,16 +23,17 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to handle scrolling
     function scrolling() {
         totalScroll++;
-        if (totalScroll == imageLength + 1) {
-            clearInterval(autoScroll);
+        const widthEl = document.querySelector(".slider > :first-child").offsetWidth;
+        slider.style.left = `-${totalScroll * widthEl}px`;
+
+        if (totalScroll == imageLength) {
             totalScroll = 1;
             slider.style.transition = "0s";
             slider.style.left = "0";
-            autoScroll = setInterval(scrolling, delay);
+            setTimeout(() => {
+                slider.style.transition = "2s";
+            });
         }
-        const widthEl = document.querySelector(".slider > :first-child").offsetWidth;
-        slider.style.left = `-${totalScroll * widthEl}px`;
-        slider.style.transition = "2s";
     }
 
     // Start auto-scroll

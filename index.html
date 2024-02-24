@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap" rel="stylesheet">
     <title>E-Commerce Store</title>
 </head>
 
@@ -18,7 +21,7 @@
     <!-- Header (Navbar) -->
     <header class="navbar">
         <div class="logo">
-            <img src="photos\Untitled design.png" alt="Your Logo" />
+            <img src="photos/logo.png" alt="Your Logo" />
         </div>
         <nav class="nav-links">
             <a href="#">Home</a>
@@ -53,13 +56,13 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="logo"><img src="photos\Untitled design.png" alt="Your Logo" /></div>
+        <div class="logo"><img src="photos/logo.png" alt="Your Logo" /></div>
         <nav class="footer-nav">
             <a href="#">Home</a>
             <a href="#">Products</a>
             <a href="#">Contact Us</a>
             <a href="#">Cart</a>
-            <a href="#">Login/SignUp</a>
+            <a href="#">Login/SignUp</a>    
         </nav>
         <div class="social-media-icons">
             <a href="#"><img src="photos\fb.png"><i class="fab fa-facebook"></i></a>
@@ -73,10 +76,10 @@
 
             // Static data for product ratings, image link, and product link
             const products = [
-                { name: 'Product A', rating: 4.5, image: 'photos/frock.png' },
-                { name: 'Product B', rating: 3.8, image: 'photos/jeans.png' },
-                { name: 'Product C', rating: 4.2, image: 'photos/saree.png' },
-                { name: 'Product D', rating: 4.0, image: 'photos/crop.png' }
+                { name: 'Product A', rating: 4.5, image: 'photos/frock.png', link:"#" },
+                { name: 'Product B', rating: 3.8, image: 'photos/jeans.png', link:"#" },
+                { name: 'Product C', rating: 4.2, image: 'photos/saree.png', link:"#" },
+                { name: 'Product D', rating: 4.0, image: 'photos/crop.png', link:"#" }
             ];
 
             // Sort products based on rating in descending order
