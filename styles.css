@@ -171,9 +171,10 @@ body {
 }
 
 .social-media-icons img {
-    width: 20px; /* Adjust the width as needed */
+    width: 20px;
     height: auto;
     margin-right: 5px;
+    mix-blend-mode: color-burn;
 }
 .logo a {
     color: rgb(0, 0, 0);
