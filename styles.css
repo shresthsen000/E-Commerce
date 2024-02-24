@@ -121,7 +121,7 @@ body {
 .footer {
     background-color: #808080;
     color: rgb(0, 0, 0);
-    padding: 10px;
+    padding: 0px;
     position: sticky;
     bottom: 0;
     display: flex;
