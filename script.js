@@ -68,6 +68,31 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 50);
     });
 
+    const productTilesContainer = document.getElementById('productTiles');
+
+    // Static data for product ratings and image link
+    const products = [
+        { name: 'Product A', rating: 4.5, image: 'E-Commerce\photos\frock.png' },
+        { name: 'Product B', rating: 3.8, image: 'E-Commerce\photos\crop.png' },
+        { name: 'Product C', rating: 4.2, image: 'E-Commerce\photos\saree.png' },
+        { name: 'Product D', rating: 4.0, image: 'E-Commerce\photos\jeans.png' }
+    ];
+
+    // Sort products based on rating in descending order
+    products.sort((a, b) => b.rating - a.rating);
+
+    // Generate product tiles and append them to the container
+    products.slice(0, 4).forEach(product => {
+        const productTile = document.createElement('div');
+        productTile.classList.add('product-tile');
+        productTile.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <h3>${product.name}</h3>
+            <div class="product-rating">Rating: ${product.rating}</div>
+        `;
+        productTilesContainer.appendChild(productTile);
+    });
+
     // Burger menu click event
     const burgerMenu = document.querySelector(".burger-menu");
     const navLinks = document.querySelector(".nav-links");
