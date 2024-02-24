@@ -43,6 +43,7 @@ body {
     top: 0;
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
 }
 
 .nav-links {
@@ -82,7 +83,6 @@ body {
     margin: 0 -8px;
     padding: 7px;
     background-color: #202c37;
-    z-index: -1;
 }   
 
 .prev {
