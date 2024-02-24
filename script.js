@@ -1,7 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Hide loader on page load
     const loader = document.getElementById("loader");
-    loader.style.display = "none";
+    loader.style.display = "flex";
+    
+    window.addEventListener('load', function () {
+        loader.style.display = 'none';
+    });
 
     // Auto-slide function
     const slider = document.querySelector(".slider");
@@ -67,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
             autoScroll = setInterval(scrolling, delay);
         }, 50);
     });
-    
+
     // Burger menu click event
     const burgerMenu = document.querySelector(".burger-menu");
     const navLinks = document.querySelector(".nav-links");
