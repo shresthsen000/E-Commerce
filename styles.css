@@ -5,7 +5,6 @@ body {
     background-color: #cadff1;
 }
 
-/* Loader Styles */
 #loader {
     position: fixed;
     top: 0;
@@ -43,6 +42,7 @@ body {
     top: 0;
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
 }
 
 .nav-links {
@@ -82,7 +82,6 @@ body {
     margin: 0 -8px;
     padding: 7px;
     background-color: #202c37;
-    z-index: -1;
 }   
 
 .prev {
@@ -171,17 +170,18 @@ body {
 }
 
 .social-media-icons img {
-    width: 20px; /* Adjust the width as needed */
+    width: 20px;
     height: auto;
     margin-right: 5px;
+    mix-blend-mode: color-burn;
 }
+
 .logo a {
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: bold;
 }
-
-.logo img{
+.logo img {
     width: 5rem;
     height: 4rem;
 }
