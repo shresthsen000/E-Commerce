@@ -65,6 +65,35 @@
             <a href="#"><img src="photos\insta.jpeg"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const productTilesContainer = document.getElementById('productTiles');
+
+            // Static data for product ratings, image link, and product link
+            const products = [
+                { name: 'Product A', rating: 4.5, image: 'photos/frock.png' },
+                { name: 'Product B', rating: 3.8, image: 'photos/jeans.png' },
+                { name: 'Product C', rating: 4.2, image: 'photos/saree.png' },
+                { name: 'Product D', rating: 4.0, image: 'photos/crop.png' }
+            ];
+
+            // Sort products based on rating in descending order
+            products.sort((a, b) => b.rating - a.rating);
+
+            // Generate product tiles and append them to the container
+            products.slice(0, 4).forEach(product => {
+                const productTile = document.createElement('a');
+                productTile.href = product.link;
+                productTile.classList.add('product-tile');
+                productTile.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <h3>${product.name}</h3>
+                    <div class="product-rating">Rating: ${product.rating}</div>
+                `;
+                productTilesContainer.appendChild(productTile);
+            });
+        });
+    </script>
 </body>
 
 </html>
