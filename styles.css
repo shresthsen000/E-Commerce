@@ -63,8 +63,6 @@ body {
     background: none;
     border: none;
     color: #ffffff;
-    /* cursor: pointer;
-    outline: none; */
     margin: 0 -8px;
     padding: 7px;
     background-color: #202c37;
@@ -98,7 +96,24 @@ body {
 }
 
 .top-products {
-    /* Add styling for top products section */
+    padding: 20px;
+}
+
+.product-tiles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product-tile {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.product-rating {
+    margin-top: 10px;
+    color: gold;
 }
 
 .footer {
