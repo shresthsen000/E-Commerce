@@ -20,7 +20,7 @@ body {
 }
 
 .navbar {
-    background-color: #c8c9ca;
+    background-color: #808080;
     color: rgb(0, 0, 0);
     padding: 0px;
     position: sticky;
@@ -84,6 +84,7 @@ body {
     position: relative;
     left: 0;
     transition: .3s;
+    z-index: -1;
 }
 
 .slide{
@@ -118,8 +119,8 @@ body {
 }
 
 .footer {
-    background-color: #333;
-    color: rgb(216, 216, 216);
+    background-color: #808080;
+    color: rgb(0, 0, 0);
     padding: 10px;
     position: sticky;
     bottom: 0;
@@ -144,7 +145,7 @@ body {
     margin-right: 5px;
 }
 .logo a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: bold;
 }
@@ -155,13 +156,13 @@ body {
 }
 
 .footer-nav a {
-    color: rgb(216, 216, 216);
+    color: rgb(0, 0, 0);
     text-decoration: none;
     margin-right: 15px;
 }
 
 /* Add media queries for responsiveness */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .nav-links {
         display: none;
         flex-direction: column;
