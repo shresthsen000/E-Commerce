@@ -18,7 +18,7 @@
         <div class="spinner"></div>
     </div>
 
-    <!-- Header (Navbar) -->
+    <!-- Navbar -->
     <header class="navbar">
         <div class="logo-container">
             <img src="photos/logo.png" alt="Your Logo"/>
@@ -50,10 +50,10 @@
     <section class="top-products">
         <h2>Top Products</h2>
         <div class="product-tiles" id="productTiles">
-        <!-- Product tiles will be dynamically added here -->
         </div>
     </section>
 
+    <!-- More Products Section-->
     <section class="more-products">
         <h2>Products</h2>
         <div class = "product-tiles" id="productTiles">
@@ -121,10 +121,8 @@
                 { name: 'Product D', rating: 4.0, image: 'photos/crop.png', link:"#" }
             ];
 
-            // Sort products based on rating in descending order
+            
             products.sort((a, b) => b.rating - a.rating);
-
-            // Generate product tiles and append them to the container
             products.slice(0, 4).forEach(product => {
                 const productTile = document.createElement('a');
                 productTile.href = product.link;
