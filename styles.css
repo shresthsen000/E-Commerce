@@ -185,6 +185,11 @@ body {
     width: 5rem;
     height: 4rem;
 }
+.logo-container img{
+    margin-left: 50vw;
+    height: 4rem;
+    width: 5rem;
+}
 
 .footer-nav a {
     color: rgb(0, 0, 0);
