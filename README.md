@@ -50,8 +50,3 @@ We welcome contributions! If you'd like to enhance the E-Store experience:
 3. Commit your changes: git commit -m 'Add some feature'.
 4. Push to the branch: git push origin feature/your-feature.
 5. Submit a pull request.
-   
-## License
-This project is licensed under the MIT License.
-
-
