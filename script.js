@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Hide loader on page load
     const loader = document.getElementById("loader");
     loader.style.display = "flex";
 
@@ -15,12 +14,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const delay = 2000;
     let autoScroll;
 
-    // Duplicate the slides for smooth transition
+    // Smooth Transition
     for (let i = 0; i < 1; i++) {
         slider.insertAdjacentHTML("beforeend", slides[i].outerHTML);
     }
 
-    // Function to handle scrolling
+    // Function for scrolling
     function scrolling() {
         totalScroll++;
         if (totalScroll == imageLength + 1) {
@@ -36,8 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
         slider.style.left = '-' + totalScroll * widthEl + 'px';
         slider.style.transition = "2s";
     }
-
-    // Start auto-scroll
     autoScroll = setInterval(scrolling, delay);
 
     // Arrow key events
@@ -66,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 50);
     });
 
-    // Previous arrow click event
     const prevArrow = document.querySelector(".prev");
     prevArrow.addEventListener("click", function () {
         clearInterval(autoScroll);
@@ -83,7 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 50);
     });
 
-    // Next arrow click event
     const nextArrow = document.querySelector(".next");
     nextArrow.addEventListener("click", function () {
         clearInterval(autoScroll);

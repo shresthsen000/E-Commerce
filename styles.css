@@ -16,7 +16,6 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    display: none; /* Initially hide the loader */
 }
 
 .spinner {
@@ -120,7 +119,7 @@ body {
 }
 
 .more-products .product-tile {
-    flex: 0 0 22%; /* Adjust the width as needed */
+    flex: 0 0 22%;
     margin: 10px;
     text-align: center;
     border-radius: 20px;
@@ -162,7 +161,7 @@ body {
 }
 
 .product-tile {
-    width: 20%; /* Adjust the width as needed */
+    width: 20%;
     margin: 10px;
     text-align: center;
     border-radius: 20px;
@@ -226,7 +225,6 @@ body {
     margin-right: 15px;
 }
 
-/* Add media queries for responsiveness */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
