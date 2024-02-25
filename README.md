@@ -27,7 +27,7 @@ To get started with the project, follow these simple steps:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/e-store.git
+   https://github.com/shresthsen000/E-Commerce
 
 2. **Open the Website**:
 
